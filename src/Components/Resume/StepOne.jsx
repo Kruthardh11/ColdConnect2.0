@@ -63,20 +63,20 @@ const StepOne = ({formData, setFormData}) => {
   // }
 
   return (
-    <div className='m-[5%] bg-gray-200 rounded-md p-[2%] flex flex-col-2 mb-[0%]'>
-      <div className="relative">
-  <h3 className="absolute top-0 left-0  p-2 text-lg font-bold">
+    <div className='m-[5%] bg-gray-200 rounded-md p-[2%] sm:flex  sm:flex-col-2 sm:flex-col-2 sm:mb-[0%]'>
+      <div className="sm:relative">
+  <h3 className="sm:absolute sm:top-0 sm:left-0  sm:p-2 sm:text-lg font-bold text-xl items-center justify-center">
     Step 1: Personal Information
   </h3>
-  <img src={design} className="h-96" />
+  <img src={design} className="sm:h-96 sm:block hidden" />
 </div>
 
-<div className="flex ml-[15%]">
-  <div className="flex flex-col">
+<div className="sm:flex sm:ml-[15%] ">
+  <div className="flex flex-col items-center justify-center">
     <label className="mb-2 font-bold">Name</label>
     <input
       type="text"
-      className="input-box mb-4 w-64 h-10 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="name"
       value={formData.name}
       placeholder="Name"
@@ -86,7 +86,7 @@ const StepOne = ({formData, setFormData}) => {
     <label className="mb-2 font-bold">Email ID</label>
     <input
       type="email"
-      className="input-box mb-4 w-64 h-10 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="email"
       placeholder="Email"
       onChange={(event) => setFormData({ ...formData, email: event.target.value })}
@@ -95,18 +95,18 @@ const StepOne = ({formData, setFormData}) => {
     <label className="mb-2 font-bold">Phone Number</label>
     <input
       type="tel"
-      className="input-box mb-4 w-64 h-10 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="phone"
       placeholder="Phone"
       onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
     />
   </div>
 
-  <div className="ml-8 flex flex-col">
+  <div className="sm:ml-8 flex flex-col items-center justify-center">
     <label className="mb-2 font-bold">Country</label>
     <input
       type="text"
-      className="input-box mb-4 w-64 h-10 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="country"
       placeholder="Country"
       onChange={(event) => setFormData({ ...formData, country: event.target.value })}
@@ -115,7 +115,7 @@ const StepOne = ({formData, setFormData}) => {
     <label className="mb-2 font-bold">Profession</label>
     <input
       type="text"
-      className="input-box mb-4 w-64 h-10 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="profession"
       placeholder="Profession"
       onChange={(event) => setFormData({ ...formData, profession: event.target.value })}

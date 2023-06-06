@@ -19,45 +19,47 @@ const ResumeSelect = () => {
   };
 
   return (
-    <>
-      <Navbar /> 
-
-      <div className='sm:flex sm:flex-col-2 m-[5%] border-4 border-blue-800 p-[4%] bg-blue-100 mb-[1%]'>
-      <div className='border-4 border-yellow-500 mb-[25%] sm:mb-[0%]' onClick={handleFirstClick}>
-  <div className='sm:p-[10%] p-[7%] '>
     <div>
-      <Link to='/generatemail' >
-      <span className='text-6xl'>
-        <FaFilePdf className='ml-[40%] mb-[10%]'/>  
+      <Navbar /> 
+      <div className="flex flex-col items-center justify-center m-5 bg-white">
+  <div className="hover:bg-gray-200 cursor-pointer shadow-lg rounded-lg p-7 mb-5 sm:flex sm:flex-row sm:mb-0 sm:mt-6 sm:mb-16" onClick={handleFirstClick}>
+    <Link to="/generatemail">
+      <span className="text-6xl">
+        <FaFilePdf className="ml-40 mb-10" />
       </span>
-      </Link>
-      <h2 className='font-ubuntu text-2xl text-gray-600 sm:ml-[13%] ml-[5%]'>I already have a resume</h2>
-      <p className='font-ubuntu text-lg text-gray-500 hidden md:block'>We'll re-format it and fill in your information so you don't have to.</p>
+    </Link>
+    <div className="sm:ml-5">
+      <h2 className="font-ubuntu text-2xl text-gray-600">I already have a resume</h2>
+      <p className="font-ubuntu text-lg text-gray-500 hidden md:block">
+        We'll re-format it and fill in your information so you don't have to.
+      </p>
+    </div>
+  </div>
+
+  <div className="hover:bg-gray-200 cursor-pointer shadow-lg rounded-lg p-7 sm:flex sm:flex-row" onClick={handleSecondClick}>
+    <Link to="/generateResume">
+      <span className="text-6xl">
+        <FaRegFilePdf className="ml-40 mb-10" />
+      </span>
+    </Link>
+    <div className="sm:ml-5">
+      <h2 className="font-ubuntu text-2xl text-gray-600">Create a new Resume</h2>
+      <p className="font-ubuntu text-lg text-gray-500 hidden md:block">
+        Step-by-step procedure followed to create a customizable resume
+      </p>
     </div>
   </div>
 </div>
 
+<Link to="/">
+  <button className="bg-gray-300 sm:ml-[46%] hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-40 mt-5">
+    <span> Back</span>
+  </button>
+</Link>
 
-        <div className='border-4 border-yellow-500 sm:ml-[15%]' onClick={handleSecondClick}> 
-          <div className="sm:p-[10%] p-[7%]">
-            <div>
-              <Link to='/generateResume'>
-              <span className='text-6xl'>
-                <FaRegFilePdf className='ml-[40%] mb-[10%]' />
-              </span>
-              </Link>
-            <h2 className='font-ubuntu text-2xl text-gray-600  ml-[5%] sm:ml-[19%]'>Create a new Resume</h2>
-            <p className='font-ubuntu text-lg text-gray-500 hidden md:block'>Step by step procedure followed to create a customizable resume</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  
 
-      
-<Link to='/' ><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-[40%] mt-[5%] sm:ml-[46%]  " onclick={handlePrevClick}>
-  <span>Go Back</span>
-</button></Link>
-    </>
+    </div>
   );
 };
 

@@ -64,10 +64,12 @@ const ResumeMaker = () => {
   return (
     <div>
       <Navbar/>
-    <h2 className='ml-[45%] font-bold text- xl mt-[2%]'>Create Your Resume</h2>
+      <div className='flex justify-center items-start sm:flex sm:ml-[0%]' >  
+           <h2 className='  font-bold text- xl mt-[2%]'>Create Your Resume</h2>
+</div>
     <div>{PageDisplay()}</div>
 
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mt-[2%]">
   <button
     className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
     onClick={handlePreviousPage}
