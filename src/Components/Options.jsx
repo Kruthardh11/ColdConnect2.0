@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import { FaFilePdf,FaRegFilePdf } from "react-icons/fa"
+import { FaFilePdf,FaRegFilePdf } from "react-icons/fa";
+import bgImg from './assets/bgcc.webp'
 
 const ResumeSelect = () => {
   const navigate = useNavigate();
@@ -19,13 +20,13 @@ const ResumeSelect = () => {
   };
 
   return (
-    <div>
+    <div className='relative overflow-hidden' style={{ backgroundImage: `url(${bgImg})` , backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
       <Navbar /> 
-      <div className="flex flex-col items-center justify-center m-5 bg-white">
-  <div className="hover:bg-gray-200 cursor-pointer shadow-lg rounded-lg p-7 mb-5 sm:flex sm:flex-row sm:mb-0 sm:mt-6 sm:mb-16" onClick={handleFirstClick}>
+      <div className="flex flex-col items-center justify-center m-5 ">
+  <div className="hover:bg-gray-200 bg-white cursor-pointer shadow-lg rounded-lg p-7 mb-5 sm:flex sm:flex-row sm:mb-0 sm:mt-6 sm:mb-16" onClick={handleFirstClick}>
     <Link to="/generatemail">
       <span className="text-6xl">
-        <FaFilePdf className="ml-40 mb-10" />
+        <FaFilePdf className="sm:ml-40 ml-20 mb-10" />
       </span>
     </Link>
     <div className="sm:ml-5">
@@ -36,10 +37,10 @@ const ResumeSelect = () => {
     </div>
   </div>
 
-  <div className="hover:bg-gray-200 cursor-pointer shadow-lg rounded-lg p-7 sm:flex sm:flex-row" onClick={handleSecondClick}>
+  <div className="hover:bg-gray-200 bg-white cursor-pointer shadow-lg rounded-lg p-7 sm:flex sm:flex-row" onClick={handleSecondClick}>
     <Link to="/generateResume">
       <span className="text-6xl">
-        <FaRegFilePdf className="ml-40 mb-10" />
+        <FaRegFilePdf className="sm:ml-40 ml-20 mb-10" />
       </span>
     </Link>
     <div className="sm:ml-5">
@@ -52,7 +53,7 @@ const ResumeSelect = () => {
 </div>
 
 <Link to="/">
-  <button className="bg-gray-300 sm:ml-[46%] hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-40 mt-5">
+  <button className="bg-gray-300 sm:ml-[46%] hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-40 mt-5 sm:mb-[15%] mb-[90%]">
     <span> Back</span>
   </button>
 </Link>

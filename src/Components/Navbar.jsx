@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="bg-blue-200  ">
+    <div className="bg-purple-400  ">
       <nav class="flex items-center justify-between flex-wrap  p-6 w-full z-10 top-0 ">
         <div class="flex items-center flex-shrink-0 text-[#656EDF] mr-6">
           <img src={iconn} alt=" " className="w-8" />

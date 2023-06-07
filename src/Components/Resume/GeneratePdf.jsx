@@ -66,58 +66,43 @@ const GeneratePdf = ({ formData }) => {
   return (
     <div>
         <button onClick={generateAndDownloadPDF}>Download PDF</button>
-      <div id="pdf-content">
-      <div className="resume-container">
-        <div className="personal-info">
-          <h2>{formData.name}</h2>
-          <h4>{formData.profession}</h4>
-          <div className="column">
-            <p>
-              <h4>Phone </h4>
-              {formData.phone}
-            </p>
-            <p>
-              <h4>Email </h4>
-              {formData.email}
-            </p>
-            <p>
-              <h4>Country </h4>
-              {formData.country}
-            </p>
-          </div>
-          <div className="column">
-            <h2>Employment Information</h2>
-            <p>
-              <h4>Job Title </h4>
-              {formData.jobTitle}
-            </p>
-            <p>
-              <h4>Job Location: </h4>
-              {formData.jobplace}
-            </p>
-            <p>
-              <h4>Start Date </h4>
-              {formData.startDate}
-            </p>
-            <p>
-              <h4>End Date </h4>
-              {formData.endDate}
-            </p>
+
+        <div className='flex items-start justify-center bg-blue-100 '>
+      <div id="pdf-content" className='flex '>
+      <div className='hidden md:block'>
+        <div className="text-center py-4">
+            <h3 className="text-2xl font-sans">Kruthardh Tirunahari</h3>
+            <h4 className=''>Full stack developer</h4>
+        </div>
+        <div className="flex ">
+            <div className=" border-r-2 border-black bg-blue-400 p-5">
+                {/* Content for the left column */}
+                <div className='border-b-2 border-gray-500'>
+                  <h3 className='font-normal'>contact </h3>
+                  <ul className='ml-5'>
+                    <li>phone</li>
+                    <li>email</li>
+                    <li>github</li>
+                  </ul>
+
+                </div>
+                
+                <div>skills</div>
+                
+                <div>awards</div>
+                
+            </div>
+            <div className=" bg-red-400 p-5">
+                {/* Content for the right column */}
+                <div>summary</div>
+                
+                <div>exp</div>
+                
+                <div>projects</div>
+            </div>
           </div>
         </div>
-        <div className="skills">
-          <h2>Skills</h2>
-          <ul>
-            {formData.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="education">
-          <h2>Educational Details</h2>
-          {/* Render educational details here */}
-        </div>
-      </div>
+    </div>
     </div>
 
     <button onClick={handleGetJobs} > Get jobs</button>

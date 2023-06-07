@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { BiUpload } from "react-icons/bi";
+import bgImg from './assets/bgcc.webp';
 
 const ColdMail = () => {
   const navigate = useNavigate();
@@ -72,58 +73,54 @@ const ColdMail = () => {
   };
 
   return (
-    <>
+    <div className='relative overflow-hidden' style={{ backgroundImage: `url(${bgImg})` , backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', backgroundColor: 'rgba(255, 255, 255, 0.8)'  }}>
     <Navbar/>
-    <button onClick={handleGoBack} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-[45%] ">
+    <div className='flex items-start justify-center mt-[1%]'>
+    <button onClick={handleGoBack} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
       Go Back
     </button>
-
-<div className="sm:flex sm:flex-col-2 p-[2%] border-4 border-blue-700 m-[4%]">
-  <div className="sm:mr-[15%] border-4 border-yellow-500 p-[3%]">
-    <span className="flex items-center">
-      <input
-        type="file"
-        accept=".pdf"
-        onChange={handleFileInputChange}
-        ref={fileInputRef}
-        id="file-input"
-        class="hidden"
-      />
-      <div className='bg-blue-500 rounded p-[1%] text-lg mb-[5%]'>      
-         <BiUpload  />
+    </div>
+    <div className="flex flex-col items-center p-2 m-4">
+  <div className="bg-white shadow-xl p-5 mb-5 hover:bg-gray-200 transition-colors duration-300">
+    <input
+      type="file"
+      accept=".pdf"
+      onChange={handleFileInputChange}
+      ref={fileInputRef}
+      id="file-input"
+      className="hidden"
+    />
+    <div className="flex justify-center items-center mb-5">
+      <div className="bg-blue-500 rounded-full p-3">
+        <BiUpload className="text-white text-4xl" />
       </div>
-      <label for="file-input" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer sm:mb-[5%]">
-        Choose File
-      </label>
-    </span>
+    </div>
+    <label htmlFor="file-input" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer text-center mb-5">
+      Choose File
+    </label>
     {previewSource && (
       <div>
-        <iframe title="Preview" src={previewSource} class="w-96 h-96"></iframe>
-        <button onClick={clearFileInput} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
+        <iframe title="Preview" src={previewSource} className="w-96 h-96"></iframe>
+        <button onClick={clearFileInput} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
           Clear
         </button>
       </div>
     )}
   </div>
-  <div className="ml-[5%] border-4 border-yellow-500 p-[5%]">
-  <textarea
-    className='h-96 w-96'
-    placeholder="Paste or enter text here"
-    ref={textareaRef}
-    value={''} // Render the resume text from the temporary variable
-    readOnly
-  ></textarea>
-   <button onClick={handleGenerateMail} class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">
-  Generate Mail
-</button>
+  <div className="flex flex-col bg-white shadow-xl m-5 p-2 sm:p-5 hover:bg-gray-200 sm:mb-0 mb-[45%]">
+    <textarea
+      className="h-96 w-96"
+      placeholder="Paste or enter text here"
+      ref={textareaRef}m
+      value={''} // Render the resume text from the temporary variable
+      readOnly
+    ></textarea>
+    <button onClick={handleGenerateMail} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">
+      Generate Mail
+    </button>
+  </div>
 </div>
- 
-
-</div>
-
-
-
-    </>
+    </div>
   );
 };
 
