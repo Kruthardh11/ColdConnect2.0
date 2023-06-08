@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StepOne from './StepOne';
-import StepTwo from './stepTwo';
-import StepThree from './stepThree';
+import StepTwo from './StepTwo';
+import StepThree from './StepThree';
 import StepFour from './StepFour';
 import GeneratePdf from './GeneratePdf';
 import Navbar from '../Navbar';
@@ -14,23 +14,35 @@ const ResumeMaker = () => {
     phone: "",
     country: "",
     profession: "",
-    jobTitle: "",
-    employer: "",
-    jobplace: "",
-    startDate: "",
-    endDate: "",
-    school: "",
-    schoolArea: "",
-    schoolStart: "",
-    schoolEnd: "",
-    undergradclg: "",
-    undergradArea: "",
-    undergradStart: "",
-    undergradEnd: "",
-    postgradclg: "",
-    postgradArea: "",
-    postgradStart: "",
-    postgradEnd: "",
+    github:"",
+    job1:"",
+    summary1:"",
+    sd1:"",
+    ed1:"",
+    emp1:"",
+    job2:"",
+    summary2:"",
+    sd2:"",
+    ed2:"",
+    emp2:"",
+    highSchool: {
+      school: '',
+      city: '',
+      enrollYear: '',
+      gradYear: ''
+    },
+    undergraduate: {
+      school: '',
+      city: '',
+      enrollYear: '',
+      gradYear: ''
+    },
+    masters: {
+      school: '',
+      city: '',
+      enrollYear: '',
+      gradYear: ''
+    },
     skills: []
   })
 

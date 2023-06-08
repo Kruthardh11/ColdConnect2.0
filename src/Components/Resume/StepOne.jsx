@@ -89,6 +89,7 @@ const StepOne = ({formData, setFormData}) => {
       className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="email"
       placeholder="Email"
+      value={formData.email}
       onChange={(event) => setFormData({ ...formData, email: event.target.value })}
     />
 
@@ -98,6 +99,7 @@ const StepOne = ({formData, setFormData}) => {
       className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="phone"
       placeholder="Phone"
+      value={formData.phone}
       onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
     />
   </div>
@@ -109,6 +111,7 @@ const StepOne = ({formData, setFormData}) => {
       className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="country"
       placeholder="Country"
+      value={formData.country}
       onChange={(event) => setFormData({ ...formData, country: event.target.value })}
     />
 
@@ -118,7 +121,18 @@ const StepOne = ({formData, setFormData}) => {
       className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       name="profession"
       placeholder="Profession"
+      value={formData.profession}
       onChange={(event) => setFormData({ ...formData, profession: event.target.value })}
+    />
+
+     <label className="mb-2 font-bold">GitHub Link</label>
+    <input
+      type="text"
+      className="input-box mb-4 w-64 h-10 px-4 rounded border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      name="profession"
+      placeholder="Profession"
+      value={formData.github}
+      onChange={(event) => setFormData({ ...formData, github: event.target.value })}
     />
 
     <button className="submit-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleSubmit}>

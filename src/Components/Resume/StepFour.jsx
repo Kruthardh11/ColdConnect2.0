@@ -47,7 +47,7 @@ const StepFour = ({formData, setFormData}) => {
             value={skill}
             onChange={(e) => handleSkillChange(index, e.target.value)}
             placeholder="Skill"
-            className="input-boxy"
+            className=""
           />
         ))}
         <button className="add-skill" onClick={handleAddSkill}>
