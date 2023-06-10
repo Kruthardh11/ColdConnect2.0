@@ -24,9 +24,9 @@ const StepThree = ({formData, setFormData}) => {
   </h3>
   <img src={design} className="sm:h-96 sm:block hidden" />
 </div>
-   <div className="flex  sm:flex-cols-3 gap-4">
+   <div className="flex  sm:flex-col-3 gap-4">
    <div className='flex flex-col mx-[10%]'>
-        <h2>High School</h2>
+        <h2 className='font-bold text-2xl'>High School</h2>
         <label className="mb-2 font-bold">School Name</label>
         <input
           type="text"
@@ -65,7 +65,7 @@ const StepThree = ({formData, setFormData}) => {
       </div>
 
       <div className='flex flex-col mr-[5%]'>
-        <h2>Undergraduate</h2>
+        <h2 className='font-bold text-2xl'>Undergraduate</h2>
         <label className="mb-2 font-bold">School Name</label>
         <input
           type="text"
@@ -104,7 +104,7 @@ const StepThree = ({formData, setFormData}) => {
       </div>
 
       <div className='flex flex-col '>
-        <h2>Masters</h2>
+        <h2 className='font-bold text-2xl'>Masters</h2>
         <label className="mb-2 font-bold">School Name</label>
         <input
           type="text"
