@@ -109,7 +109,7 @@ border-radius: 0 10px 10px 0;
     height: 500px;
     position: relative;
     left: 8rem;
-    top: 4rem;
+    top: 2rem;
     border-radius: 3%;
   }
   
@@ -209,54 +209,30 @@ cursor: pointer;
     overflow: hidden;
 }
 
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    margin-left: 5rem; /* Add margin to adjust spacing */
-  }
-  
-  .card-1 {
-    width: 30rem;
-    height: 35rem; /* Adjust the height as desired */
-    background: #4f4ebd;
-    box-shadow: 16px 16px 35px rgba(0, 0, 0, 0.09);
-    border-radius: 30px;
-    padding: 1rem; /* Add padding for content spacing */
-    color: #fff; /* Change the text color */
-  }
-  
-  .card-2 {
-    width: 30rem;
-    height: 35rem; /* Adjust the height as desired */
-    background: #4f4ebd;
-    box-shadow: 16px 16px 35px rgba(0, 0, 0, 0.09);
-    border-radius: 30px;
-    padding: 1rem; /* Add padding for content spacing */
-    color: #fff; /* Change the text color */
-  }
-  
-  .card-3 {
-    width: 30rem;
-    height: 35rem; /* Adjust the height as desired */
-    background: #4f4ebd;
-    box-shadow: 16px 16px 35px rgba(0, 0, 0, 0.09);
-    border-radius: 30px;
-    padding: 1rem; /* Add padding for content spacing */
-    color: #fff; /* Change the text color */
-  }
-
   .coldconnect>h1{
     font-size: 7rem;
   }
 
-  @media screen and (max-width: 768px) {
-    /* Styles for screens up to 768px */
-    .maincontainer {
-      display: flex;
-      flex-direction: column;
-    }
+  .input-2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
   
-    /* Adjust other styles as needed */
+  .copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 2rem;
+    position: relative;
+    right: -45rem;
+  }
+  
+  .copy-success {
+    font-size: 14px;
+    color: green;
+    margin-top: 5px;
   }
   

@@ -4,11 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
 import './mid.css';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
+
 const GenerateMail = () => {
   const navigate = useNavigate();
   const [previewSource, setPreviewSource] = useState('');
   const [pdfText, setPdfText] = useState('');
   const [mail, setMail] = useState('');
+  const [copySuccess, setCopySuccess] = useState(false);
+
 
   const [manuallyEnteredData, setManuallyEnteredData] = useState('');
   const fileInputRef = useRef(null); 
@@ -98,6 +103,15 @@ const GenerateMail = () => {
     setManuallyEnteredData(event.target.value);
   };
 
+  const handleCopy = () => {
+    if (textareaRef.current) {
+      textareaRef.current.select();
+      document.execCommand('copy');
+      setCopySuccess(true);
+    }
+  };
+  
+
   return (
     <>
     <Navbar/>
@@ -124,12 +138,20 @@ const GenerateMail = () => {
           )}
         </div>
         <div className="input-2">
+        <div className="input-2-header">
+    {mail && (
+      <button className="copy-button" onClick={handleCopy}>
+        <FontAwesomeIcon icon={faCopy} />
+      </button>
+    )}
+  </div>
           <textarea
             className="textarea-input"
             placeholder="Paste or enter text here"
             ref={textareaRef}
             onChange={handleTextareaChange}
           ></textarea>
+            {copySuccess && <p className="copy-success">Mail copied to clipboard!</p>}
         </div>
       </div>
       <button className="generate" onClick={handleGenerateMail}>
