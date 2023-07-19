@@ -5,8 +5,14 @@ import StepThree from './StepThree';
 import StepFour from './StepFour';
 import GeneratePdf from './GeneratePdf';
 import Navbar from '../Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const ResumeMaker = () => {
+  const navigate = useNavigate();
+  const handleLogoClick = () => {
+    navigate("/options");
+  };
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -76,6 +82,13 @@ const ResumeMaker = () => {
   return (
     <div>
       <Navbar/>
+      <button
+  onClick={handleLogoClick}
+  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4 cursor-pointer"
+>
+  Back
+</button>
+
       <div className='flex justify-center items-start sm:flex sm:ml-[0%]' >  
            <h2 className='  font-bold text- xl mt-[2%]'>Create Your Resume</h2>
 </div>
@@ -83,9 +96,10 @@ const ResumeMaker = () => {
 
     <div className="flex justify-center items-center mt-[2%]">
   <button
-    className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+    className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 cursor-pointer"
     onClick={handlePreviousPage}
     disabled={currentPage === 1}
+    // onClick={handleLogoClick}
   >
     Previous
   </button>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import { FaFilePdf,FaRegFilePdf } from "react-icons/fa";
 import bgImg from './assets/bgcc.webp'
+import Footer from './Footer';
 
 const ResumeSelect = () => {
   const navigate = useNavigate();
@@ -57,9 +58,7 @@ const ResumeSelect = () => {
     <span> Back</span>
   </button>
 </Link>
-
-  
-
+<Footer/>
     </div>
   );
 };

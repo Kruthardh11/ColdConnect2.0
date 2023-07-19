@@ -1,0 +1,238 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card{
+    background-color: pink;
+    height: 30rem;
+    width:35rem;
+    margin-top: 3rem;
+    border-radius: 0.5cm;
+}
+
+.socials{
+    display: flex;
+    margin: 2rem;
+    gap: 2.2rem;
+    font-size: 2.5rem;
+}
+
+body{
+    background-color: #fce7fd;
+}
+
+.maincontainer{
+    position: absolute;
+    left: 6rem;
+    top: -1rem;
+}
+
+.input-1{
+    position: absolute;
+width: 780px; 
+height: 625px;
+left: 5px;
+top: 177px;
+background: #5463E1;  
+border-radius: 10px 0 0 10px; 
+}
+
+.backbtn{
+  cursor: pointer;
+  width: 9rem;
+height: 3rem;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+text-align: center;
+color: #1E2B9F;
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+}
+
+
+.input-1 iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+.input-1 > span{
+    position: relative;
+    top: 46rem;
+    left: 44rem;
+}
+
+.input-1 input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .input-1 label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+  
+  }
+  
+  .input-1 input[type="file"] + label {
+    font-size: 16px;
+  }
+  
+  .input-1 input[type="file"] + label:hover {
+    background-color: #ddd;
+  }
+  
+
+
+.input-2{
+position: absolute;
+width: 780px;
+height: 625px;
+left: 785px;
+top: 177px;
+background: #B3BBF8;
+border-radius: 0 10px 10px 0; 
+}
+
+.textarea-input {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+    border-radius: 3%;
+  }
+  
+.generate{
+width: 247px;
+height: 52px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+text-align: center;
+color: #1E2B9F;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px 123px;
+position: absolute;
+width: 347px;
+height: 89px;
+left: 68rem;
+top: 797px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px #FFB8B8;
+border-radius: 30px;
+cursor: pointer;
+}
+
+.generate:hover{
+    color: #dfe1ef;
+    }
+
+    .generate:hover,
+.generate:focus {
+  outline: none;
+}
+
+.generate:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+  }
+  
+
+.clear{
+    width: 247px;
+    height: 52px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #1E2B9F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 123px;
+    position: absolute;
+    width: 347px;
+    height: 89px;
+    left: 10rem;
+    /* left: 80px; */
+    /* top: 696px; */
+    top: 40rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px #FFB8B8;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.clear:hover{
+
+    color: #c6c8dc;
+}
+
+/* .coldconnect{
+    position: relative;
+    top: 55rem;
+    left: 43rem;
+} */
+
+.card-section{
+    position:absolute;
+    top: 60rem;
+}
+
+.coldconnect{
+    text-align: center;
+    font-size: larger;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+  .coldconnect>h1{
+    font-size: 7rem;
+  }
+
+  .input-2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 2rem;
+    position: relative;
+    right: -45rem;
+  }
+  
+  .copy-success {
+    font-size: 14px;
+    color: green;
+    margin-top: 5px;
+  }
+  
