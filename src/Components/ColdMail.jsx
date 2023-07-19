@@ -12,7 +12,7 @@ const GenerateMail = () => {
   const [previewSource, setPreviewSource] = useState('');
   const [pdfText, setPdfText] = useState('');
   const [mail, setMail] = useState('');
-  // const [copySuccess, setCopySuccess] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
 
 
   const [manuallyEnteredData, setManuallyEnteredData] = useState('');
