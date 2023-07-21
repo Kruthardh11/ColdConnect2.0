@@ -1,24 +1,31 @@
-import React from "react";
-import { Link,useNavigate  } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import iconn from './assets/icon.svg';
 
 export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
     navigate("/");
   };
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className="bg-purple-400">
       <nav className="flex items-center justify-between flex-wrap p-6 w-full z-10 top-0">
         <div className="flex items-center flex-shrink-0 text-[#656EDF] mr-6">
-        <img src={iconn} alt=" " className="w-16 h-16 cursor-pointer" onClick={handleLogoClick} />
+          <img src={iconn} alt=" " className="w-16 h-16 cursor-pointer" onClick={handleLogoClick} />
         </div>
 
         <div className="block lg:hidden">
           <button
             id="nav-toggle"
             className="flex items-center px-3 py-2 border rounded text-[#656EDF] border-[#656EDF] hover:text-[#656EDF] hover:border-white"
+            onClick={toggleNav}
           >
             <svg
               className="fill-current h-3 w-3"
@@ -32,7 +39,9 @@ export default function Navbar() {
         </div>
 
         <div
-          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+          className={`w-full flex-grow lg:flex lg:items-center lg:w-auto ${
+            isNavOpen ? "block" : "hidden" // Use the state to conditionally apply "block" or "hidden" class
+          } pt-6 lg:pt-0`}
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
@@ -74,9 +83,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-window.onload = function () {
-  document.getElementById("nav-toggle").onclick = function () {
-    document.getElementById("nav-content").classList.toggle("hidden");
-  };
-};
