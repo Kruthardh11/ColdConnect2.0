@@ -66,7 +66,7 @@ const GenerateMail = () => {
   };
 
   const generateMail = async () => {
-    const API_KEY = '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';
+    const API_KEY = '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';
     const profile = 'Software_Engineer';
     const prompt = `Write a cold mail for a job post of ${profile}.\n\nPDF Text:\n${pdfText}\n\nManually Entered Data:\n${manuallyEnteredData}`;
 
