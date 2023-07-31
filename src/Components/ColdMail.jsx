@@ -66,7 +66,7 @@ const GenerateMail = () => {
   };
 
   const generateMail = async () => {
-    const API_KEY = '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';
+    const API_KEY = import.meta.env.VITE_OPEN_API_KEY;
     const profile = 'Software_Engineer';
     const prompt = `Write a cold mail for a job post of ${profile}.\n\nPDF Text:\n${pdfText}\n\nManually Entered Data:\n${manuallyEnteredData}`;
 
